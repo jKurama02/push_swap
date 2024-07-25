@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:58:23 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/07/25 16:59:30 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/07/25 17:18:54 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,8 +109,7 @@ int check_dup(int *arr, int len)
 int main (int argc, char **argv)
 {
 	char **numeri;
-	int *a;
-	int len_a;
+	t_stack stacks;
 	int f;
 	int i;
 
@@ -126,22 +125,23 @@ int main (int argc, char **argv)
 		numeri = (char **)malloc(sizeof(char*) * (argc));
 		ft_put_num(numeri, argv);
 	}
-	len = ft_len(numeri);
-	a = (int*)malloc(sizeof(int) * len_a);
+	stacks.len_a = ft_len(numeri);
+	stacks.a = (int*)malloc(sizeof(int) * stacks.len_a);
 	f = 0;
 	i = 0;
-	while(i < len_a)
+	while(i < stacks.len_a)
 	{
-		a[i] = ft_atoi(numeri[i], &f);
+		stacks.a[i] = ft_atoi(numeri[i], &f);
 		i++;
 	}
 	free_mat(numeri);
-	if(f == 1 || check_dup(a,len_a))
+	if(f == 1 || check_dup(stacks.a,stacks.len_a))
 	{
 		write(1, "Error\n", 6);
-		free(a);
+		free(stacks.a);
 		return(0);
 	}
-	algoritmo(a, len_a);
+	algoritm(&stacks);
+	free(stacks.a);
 	return(0);
 }

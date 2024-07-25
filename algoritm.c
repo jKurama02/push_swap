@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   algoritm.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 16:03:43 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/07/25 17:29:23 by anmedyns         ###   ########.fr       */
+/*   Created: 2024/07/25 17:14:45 by anmedyns          #+#    #+#             */
+/*   Updated: 2024/07/25 17:31:02 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
-# include <stdio.h>
+int check_asc(t_stack *stacks)
+{
+	int i;
 
-typedef struct s_stack{
-	int *a;
-	int *b;
-	int len_a;
-	int len_b;
-}				t_stack;
+	i = 0;
+	while(i < stacks->len_a - 1)
+	{
+		if(stacks->a[i] > stacks->a[i + 1])
+			return(0);
+		i++;
+	}
+	return(1);
+}
 
-int ft_strlen(char * s);
-char	**split( char *s, char c);
-void algoritm(t_stack *stacks);
-
-#endif
+void algoritm(t_stack *stacks)
+{
+	if(check_asc(stacks))
+	return;
+	
+	write(1, "ok\n", 3);
+}
