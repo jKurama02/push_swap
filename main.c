@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:58:23 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/07/25 17:18:54 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/07/25 19:20:59 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,6 +134,7 @@ int main (int argc, char **argv)
 		stacks.a[i] = ft_atoi(numeri[i], &f);
 		i++;
 	}
+	// printf("len_a = %i", stacks.a[3]);
 	free_mat(numeri);
 	if(f == 1 || check_dup(stacks.a,stacks.len_a))
 	{
