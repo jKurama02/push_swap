@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 17:14:45 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/07/25 17:31:02 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/07/25 18:23:44 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ int check_asc(t_stack *stacks)
 void algoritm(t_stack *stacks)
 {
 	if(check_asc(stacks))
-	return;
-	
-	write(1, "ok\n", 3);
+		return;
+	else if(stacks->len_a == 2)
+	{
+		ft_sa(stacks);
+	}
 }

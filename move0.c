@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   move0.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 16:03:43 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/07/25 18:31:42 by anmedyns         ###   ########.fr       */
+/*   Created: 2024/07/25 18:24:26 by anmedyns          #+#    #+#             */
+/*   Updated: 2024/07/25 18:34:17 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
-# include <stdio.h>
+void ft_sa(t_stack *stacks)
+{
+	int i;
 
-typedef struct s_stack{
-	int *a;
-	int *b;
-	int len_a;
-	int len_b;
-}				t_stack;
+	i = stacks->a[0];
+	stacks->a[0] = stacks->a[1];
+	stacks->a[1] = i;
+	write(2, "sa\n", 3);
+	return;
+}
 
-int ft_strlen(char * s);
-char	**split( char *s, char c);
-void algoritm(t_stack *stacks);
+void ft_sb(t_stack *stacks)
+{
+	int i;
 
-
-
-
-
-void ft_sa(t_stack *stacks);
-
-#endif
+	i = stacks->b[0];
+	stacks->b[0] = stacks->b[1];
+	stacks->b[1] = i;
+	write(2, "sb\n", 3);
+	return;
+}
