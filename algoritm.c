@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 17:14:45 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/07/25 18:23:44 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/07/29 17:18:51 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,30 @@ int check_asc(t_stack *stacks)
 	}
 	return(1);
 }
+void	ft_three_sorting(t_stack *stacks)
+{
+	if ((stacks->a[0] < stacks->a[1]) && (stacks->a[0] < stacks->a[2])
+		&& (stacks->a[1] > stacks->a[2]))
+	{
+		ft_sa(stacks);
+		ft_ra(stacks);
+	}
+	else if ((stacks->a[0] > stacks->a[1]) && (stacks->a[0] > stacks->a[2])
+		&& (stacks->a[1] > stacks->a[2]))
+	{
+		ft_sa(stacks);
+		ft_rra(stacks);
+	}
+	else if ((stacks->a[0] < stacks->a[1]) && (stacks->a[0] > stacks->a[2])
+		&& (stacks->a[1] > stacks->a[2]))
+		ft_rra(stacks);
+	else if ((stacks->a[0] > stacks->a[1]) && (stacks->a[0] > stacks->a[2])
+		&& (stacks->a[1] < stacks->a[2]))
+		ft_ra(stacks);
+	else if ((stacks->a[0] > stacks->a[1]) && (stacks->a[0] < stacks->a[2])
+		&& (stacks->a[1] < stacks->a[2]))
+		ft_sa(stacks);
+}
 
 void algoritm(t_stack *stacks)
 {
@@ -33,5 +57,11 @@ void algoritm(t_stack *stacks)
 	else if(stacks->len_a == 2)
 	{
 		ft_sa(stacks);
+		return;
+	}
+	else if(stacks->len_a == 3)
+	{
+		ft_three_sorting(stacks);
+		return;
 	}
 }
