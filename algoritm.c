@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 17:14:45 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/07/29 18:14:25 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/07/29 18:43:37 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,15 @@ void	ft_three_sorting(t_stack *stacks)
 		ft_sa(stacks);
 }
 
+// void  ft_five_sorting(stacks)
+// {
+
+// }
+
+
 void ft_sorter(t_stack *stacks)
 {
-	
+
 }
 
 
@@ -71,6 +77,11 @@ void algoritm(t_stack *stacks)
 		ft_three_sorting(stacks);
 		return;
 	}
+	// else if(stacks->len_a <= 5)
+	// {
+	// 	ft_five_sorting(stacks);
+	// 	return;
+	// }
 	else
 	{
 		ft_sorter(stacks);
