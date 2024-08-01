@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:58:23 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/01 18:51:57 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/01 21:29:32 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -161,7 +161,7 @@ int main (int argc, char **argv)
 
 	stacks.maxnum = max_num(stacks.a,stacks.len_a);
 
-	printf("%i", stacks.maxnum);
+	printf("%i\n", stacks.maxnum);
 
 	algoritm(&stacks);
 	free(stacks.a);
