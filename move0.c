@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 18:24:26 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/07/29 17:49:12 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/01 17:39:09 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,7 +169,7 @@ void ft_rrr(t_stack *stackss)
 	write(1, "rrr\n", 4);
 	return;
 }
-void	ft_pa(t_stack *stacks)
+void ft_pa(t_stack *stacks)
 {
 	int	len;
 

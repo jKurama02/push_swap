@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 17:14:45 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/07/29 18:43:37 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/01 18:05:06 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void	ft_three_sorting(t_stack *stacks)
 
 void ft_sorter(t_stack *stacks)
 {
+	
 
 }
 

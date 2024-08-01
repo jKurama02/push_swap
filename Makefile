@@ -6,13 +6,13 @@
 #    By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/25 15:57:58 by anmedyns          #+#    #+#              #
-#    Updated: 2024/07/25 15:58:17 by anmedyns         ###   ########.fr        #
+#    Updated: 2024/08/01 17:44:55 by anmedyns         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRC		=
+SRC		= move0.c split.c algoritm.c main.c
 
 OBJ		=	$(SRC:.c=.o)
 
@@ -23,17 +23,14 @@ RM		=	rm -f
 FLAGS	=	-Wall -Wextra -Werror
 
 $(NAME):	$(OBJ)
-			make -C ./libft
-			$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT)
+			$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 	@echo "\033[32mCompiled OK!\033[0m"
 all:		$(NAME)
 
 clean:
-			make clean -C libft
 			${RM} $(OBJ)
 	@echo "\033[33mclean OK!\033[0m"
 fclean: 	clean
-			make fclean -C libft
 			${RM} $(NAME) $(NAME_BONUS) ${OBJ}
 
 re:			fclean all

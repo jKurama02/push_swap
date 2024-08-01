@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:58:23 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/07/25 19:20:59 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/01 18:51:57 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,21 @@ void free_mat(char ** mtx)
 	}
 	free(mtx);
 }
+int max_num(int *arr, int len)
+{
+	int i;
+	int k;
+
+	k = 0;
+	i = 0;
+	while (i < len) {
+		if (arr[i] > arr[k]) {
+			k = i;
+		}
+		i++;
+	}
+	return(arr[k]);
+}
 
 int check_dup(int *arr, int len)
 {
@@ -112,6 +127,7 @@ int main (int argc, char **argv)
 	t_stack stacks;
 	int f;
 	int i;
+	int e;
 
 	if(argc == 1)
 	{
@@ -142,6 +158,11 @@ int main (int argc, char **argv)
 		free(stacks.a);
 		return(0);
 	}
+
+	stacks.maxnum = max_num(stacks.a,stacks.len_a);
+
+	printf("%i", stacks.maxnum);
+
 	algoritm(&stacks);
 	free(stacks.a);
 	return(0);
