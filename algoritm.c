@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 17:14:45 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/01 18:05:06 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/02 01:18:05 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,45 @@ void	ft_three_sorting(t_stack *stacks)
 // {
 
 // }
+int binar(int n)
+{
+	int i;
 
+	i = 0;
+	while(n)
+	{
+		n /= 2;
+		i++;
+	}
+	return(i);
+}
 
 void ft_sorter(t_stack *stacks)
 {
-	
+	int i;
+	int k;
+	int n;
 
+	n = binar(stacks->maxnum);
+
+	k = 0;
+	i = stacks->len_a;
+
+	while (k < (n -1))
+	{
+		while(--i >= 0)
+		{
+			if((stacks->a[0] >> k) % 2 == 1)
+				ft_ra(stacks);
+			else
+				ft_pb(stacks);
+		}
+		while(stacks->len_b > 0)
+		{
+			ft_pa(stacks);
+		}
+		k++;
+	}
 }
 
 

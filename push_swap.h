@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 16:03:43 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/01 18:32:44 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/02 01:01:16 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,6 @@ void	ft_rrb(t_stack *stackss);
 void	ft_rrr(t_stack *stackss);
 void	ft_pa(t_stack *stacks);
 void	ft_pb(t_stack *stacks);
-
+int		binar(int n);
 
 #endif
