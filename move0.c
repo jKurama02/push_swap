@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 18:24:26 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/02 01:06:38 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/02 18:38:12 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -198,7 +198,7 @@ void	ft_pb(t_stack *stacks)
 
 	len = stacks->len_b;
 	while (len > 0)
-	{
+	{	
 		stacks->b[len] = stacks->b[len - 1];
 		len--;
 	}

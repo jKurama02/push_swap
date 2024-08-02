@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:58:23 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/01 21:29:32 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/02 17:46:20 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,7 +150,6 @@ int main (int argc, char **argv)
 		stacks.a[i] = ft_atoi(numeri[i], &f);
 		i++;
 	}
-	// printf("len_a = %i", stacks.a[3]);
 	free_mat(numeri);
 	if(f == 1 || check_dup(stacks.a,stacks.len_a))
 	{
@@ -160,8 +159,6 @@ int main (int argc, char **argv)
 	}
 
 	stacks.maxnum = max_num(stacks.a,stacks.len_a);
-
-	printf("%i\n", stacks.maxnum);
 
 	algoritm(&stacks);
 	free(stacks.a);
