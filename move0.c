@@ -6,166 +6,166 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 18:24:26 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/02 18:38:12 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/02 20:32:07 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_sa(t_stack *stacksss)
+void ft_sa(t_stack *stacks)
 {
 	int i;
 
-	i = stacksss->a[0];
-	stacksss->a[0] = stacksss->a[1];
-	stacksss->a[1] = i;
+	i = stacks->a[0];
+	stacks->a[0] = stacks->a[1];
+	stacks->a[1] = i;
 	write(2, "sa\n", 3);
 	return;
 }
 
-void ft_sb(t_stack *stacksss)
+void ft_sb(t_stack *stacks)
 {
 	int i;
 
-	i = stacksss->b[0];
-	stacksss->b[0] = stacksss->b[1];
-	stacksss->b[1] = i;
+	i = stacks->b[0];
+	stacks->b[0] = stacks->b[1];
+	stacks->b[1] = i;
 	write(2, "sb\n", 3);
 	return;
 }
 
-void ft_ss(t_stack *stacksss)
+void ft_ss(t_stack *stacks)
 {
 	int t;
 
-	t = stacksss->a[0];
-	stacksss->a[0] = stacksss->a[1];
-	stacksss->a[1] = t;
+	t = stacks->a[0];
+	stacks->a[0] = stacks->a[1];
+	stacks->a[1] = t;
 
-	t = stacksss->b[0];
-	stacksss->b[0] = stacksss->b[1];
-	stacksss->b[1] = t;
+	t = stacks->b[0];
+	stacks->b[0] = stacks->b[1];
+	stacks->b[1] = t;
 	write(2, "ss\n", 3);
 	return;
 }
 
-void ft_ra(t_stack *stacksss)
+void ft_ra(t_stack *stacks)
 {
 	int tmp;
 	int i;
 
-	tmp = stacksss->a[0];
+	tmp = stacks->a[0];
 	i = 0;
-	while(i < (stacksss->len_a -1))
+	while(i < (stacks->len_a -1))
 	{
-		stacksss->a[i] = stacksss->a[i + 1];
+		stacks->a[i] = stacks->a[i + 1];
 		i++;
 	}
-	stacksss->a[i] = tmp;
+	stacks->a[i] = tmp;
 	write(1, "ra\n", 3);
 	return;
 }
-void ft_rb(t_stack *stacksss)
+void ft_rb(t_stack *stacks)
 {
 	int tmp;
 	int i;
 
-	tmp = stacksss->b[0];
+	tmp = stacks->b[0];
 	i = 0;
-	while(i < (stacksss->len_b -1))
+	while(i < (stacks->len_b -1))
 	{
-		stacksss->b[i] = stacksss->b[i + 1];
+		stacks->b[i] = stacks->b[i + 1];
 		i++;
 	}
-	stacksss->b[i] = tmp;
+	stacks->b[i] = tmp;
 	write(1, "rb\n", 3);
 	return;
 }
 
-void ft_rr(t_stack *stacksss)
+void ft_rr(t_stack *stacks)
 {
 	int i;
 	int t;
 
 	i = 0;
-	t = stacksss->a[0];
+	t = stacks->a[0];
 
-	while(i < stacksss->len_a - 1)
+	while(i < stacks->len_a - 1)
 	{
-		stacksss->a[i] = stacksss->a[i + 1];
+		stacks->a[i] = stacks->a[i + 1];
 		i++;
 	}
-	stacksss->a[i] = t;
+	stacks->a[i] = t;
 
 	i = 0;
-	t = stacksss->b[0];
+	t = stacks->b[0];
 
-	while(i < stacksss->len_b - 1)
+	while(i < stacks->len_b - 1)
 	{
-		stacksss->b[i] = stacksss->b[i + 1];
+		stacks->b[i] = stacks->b[i + 1];
 		i++;
 	}
-	stacksss->b[i] = t;
+	stacks->b[i] = t;
 	write(1, "rr\n", 3);
 	return;
 }
 
-void ft_rra(t_stack *stackss)
+void ft_rra(t_stack *stacks)
 {
 	int i;
 	int t;
 
-	i = stackss->len_a - 1;
-	t = stackss->a[stackss->len_a - 1];
+	i = stacks->len_a - 1;
+	t = stacks->a[stacks->len_a - 1];
 
 	while(i > 0)
 	{
-		stackss->a[i] = stackss->a[i - 1];
+		stacks->a[i] = stacks->a[i - 1];
 		i--;
 	}
-	stackss->a[0] = t;
+	stacks->a[0] = t;
 	write(1, "rra\n", 4);
 	return;
 }
 
-void ft_rrb(t_stack *stackss)
+void ft_rrb(t_stack *stacks)
 {
 	int i;
 	int t;
 
-	i = stackss->len_b - 1;
-	t = stackss->b[stackss->len_b - 1];
+	i = stacks->len_b - 1;
+	t = stacks->b[stacks->len_b - 1];
 
 	while(i > 0)
 	{
-		stackss->b[i] = stackss->b[i - 1];
+		stacks->b[i] = stacks->b[i - 1];
 		i--;
 	}
-	stackss->b[0] = t;
+	stacks->b[0] = t;
 	write(1, "rrb\n", 4);
 	return;
 }
 
-void ft_rrr(t_stack *stackss)
+void ft_rrr(t_stack *stacks)
 {
 	int i;
 	int t;
 
-	i = stackss->len_a;
-	t = stackss->a[stackss->len_a - 1];
+	i = stacks->len_a;
+	t = stacks->a[stacks->len_a - 1];
 
 	while(i-- > 0)
-		stackss->a[i] = stackss->a[i - 1];
-	stackss->a[0] = t;
-	i = stackss->len_b;
-	t = stackss->b[stackss->len_b - 1];
+		stacks->a[i] = stacks->a[i - 1];
+	stacks->a[0] = t;
+	i = stacks->len_b;
+	t = stacks->b[stacks->len_b - 1];
 
 	while(i > 0)
 	{
-		stackss->b[i] = stackss->b[i - 1];
+		stacks->b[i] = stacks->b[i - 1];
 		i--;
 	}
-	stackss->b[i] = t;
+	stacks->b[i] = t;
 	write(1, "rrr\n", 4);
 	return;
 }
@@ -194,11 +194,13 @@ void ft_pa(t_stack *stacks)
 
 void	ft_pb(t_stack *stacks)
 {
+	if(stacks->len_a == 0)
+		return;
 	int	len;
 
 	len = stacks->len_b;
 	while (len > 0)
-	{	
+	{
 		stacks->b[len] = stacks->b[len - 1];
 		len--;
 	}

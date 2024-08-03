@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:58:23 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/02 17:46:20 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/03 16:24:54 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,6 +143,7 @@ int main (int argc, char **argv)
 	}
 	stacks.len_a = ft_len(numeri);
 	stacks.a = (int*)malloc(sizeof(int) * stacks.len_a);
+	stacks.b = (int*)malloc(sizeof(int) * stacks.len_a);
 	f = 0;
 	i = 0;
 	while(i < stacks.len_a)

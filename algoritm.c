@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 17:14:45 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/02 18:30:27 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/03 16:41:50 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,6 @@ void	ft_three_sorting(t_stack *stacks)
 		ft_sa(stacks);
 }
 
-// void  ft_five_sorting(stacks)
-// {
-
-// }
 int binar(int n)
 {
 	int i;
@@ -77,22 +73,20 @@ void ft_sorter(t_stack *stacks)
 
 	k = -1;
 	i = stacks->len_a;
-	printf("%i\n", n);
+
 	while (++k <= n)
 	{
-		i = i - 1;
-		while(i >= 0)
+		printf("%i\n" , k);
+		i = stacks->len_a;
+		while(--i >= 0)
 		{
-			if((stacks->a[0] >> k) % 2 == 1)
-			{
-				i--;
-				ft_ra(stacks);
 
+			if(((stacks->a[0] >> k) % 2) == 1)
+			{
+				ft_ra(stacks);
 			}
 			else
 			{
-		//		printf("%i\n", stacks->a[0]);
-				i--;
 				ft_pb(stacks);
 			}
 		}
@@ -101,6 +95,13 @@ void ft_sorter(t_stack *stacks)
 			ft_pa(stacks);
 		}
 	}
+	int g = 0;
+	while (g < stacks->len_a)
+	{
+		printf("%i\n", stacks->a[g]);
+		g++;
+	}
+
 }
 
 
