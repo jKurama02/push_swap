@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 16:03:43 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/27 16:40:23 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/28 12:04:16 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,16 @@
 # include <limits.h>
 # include <stdio.h>
 
-typedef struct s_stack{
-	int *a;
-	int *b;
-	int len_a;
-	int len_b;
-	int maxnum;
+typedef struct s_stack
+{
+	int	*a;
+	int	*b;
+	int	len_a;
+	int	len_b;
+	int	maxnum;
 }				t_stack;
 
-int		ft_strlen(char * s);
+int		ft_strlen(char *s);
 char	**split( char *s, char c);
 void	algoritm(t_stack *stacks);
 void	ft_ss(t_stack *stacksss);
@@ -42,9 +43,8 @@ void	ft_pa(t_stack *stacks);
 void	ft_pb(t_stack *stacks);
 int		binar(int n);
 int		ft_atoi(char *str);
-void	free_mat(char ** mtx);
+void	free_mat(char **mtx);
 int		max_num(int *arr, int len);
 int		ft_len(char **mat);
-
 
 #endif
