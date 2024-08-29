@@ -6,23 +6,23 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 16:25:01 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/07/25 16:30:33 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/29 16:32:07 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_strlen(char * s)
+int	ft_strlen(char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 		i++;
-	return(i);
+	return (i);
 }
 
-char	*ft_strdup( char *src)
+char	*ft_strdup(char *src)
 {
 	char	*copy;
 	size_t	len;
@@ -41,7 +41,8 @@ char	*ft_strdup( char *src)
 	copy[i] = '\0';
 	return (copy);
 }
-char	*ft_substr( char *s, unsigned int start, size_t len)
+
+char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	size_t		i;
 	size_t		j;
@@ -55,7 +56,7 @@ char	*ft_substr( char *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len + start > ft_strlen(s))
 		len = ft_strlen(s + start);
-	s2 = (char *)malloc(sizeof(char)* (len + 1));
+	s2 = (char *)malloc(sizeof(char) * (len + 1));
 	if (s2 == NULL)
 		return (NULL);
 	while (s[i])
@@ -70,8 +71,7 @@ char	*ft_substr( char *s, unsigned int start, size_t len)
 	return (s2);
 }
 
-
-size_t	get_words( char *s, char c)
+size_t	get_words(char *s, char c)
 {
 	size_t	count;
 
@@ -92,7 +92,7 @@ size_t	get_words( char *s, char c)
 	return (count);
 }
 
-char	**split( char *s, char c)
+char	**split(char *s, char c)
 {
 	size_t		i;
 	size_t		len;
@@ -119,4 +119,3 @@ char	**split( char *s, char c)
 	count[i] = NULL;
 	return (count);
 }
-

@@ -6,13 +6,13 @@
 #    By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/25 15:57:58 by anmedyns          #+#    #+#              #
-#    Updated: 2024/08/27 14:08:11 by anmedyns         ###   ########.fr        #
+#    Updated: 2024/08/29 16:35:31 by anmedyns         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRC		= move0.c split.c algoritm.c main.c utils.c
+SRC		= move0.c move1.c split.c algoritm.c main.c utils.c move2.c
 
 OBJ		=	$(SRC:.c=.o)
 
