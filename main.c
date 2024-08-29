@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:58:23 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/27 16:44:20 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/29 16:20:46 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,7 @@ void	init_stacks(int argc, char **argv, t_stack *stacks)
 		ft_put_num(numeri, argv);
 	}
 	stacks->len_a = ft_len(numeri);
+	stacks->len_b = 0;
 	stacks->a = (int *)malloc (sizeof(int) * stacks->len_a);
 	stacks->b = (int *)malloc (sizeof(int) * stacks->len_a);
 	i = 0;
@@ -122,6 +123,11 @@ int	main(int argc, char **argv)
 	}
 	stacks.maxnum = max_num(stacks.a, stacks.len_a);
 	algoritm (&stacks);
+	printf("%i\n", stacks.a[0]);
+	printf("%i\n", stacks.a[1]);
+	printf("%i\n", stacks.a[2]);
+	printf("%i\n", stacks.a[3]);
+
 	free(stacks.a);
 	free(stacks.b);
 	return (0);
