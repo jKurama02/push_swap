@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 16:03:43 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/29 16:25:07 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/30 21:01:00 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ void	free_mat(char **mtx);
 int		max_num(int *arr, int len);
 int		ft_len(char **mat);
 void	init_stacks(int argc, char **argv, t_stack *stacks);
+char	**ft_put_num(char **numeri, char **argv);
+// int check_alpha(int argc, char **argv);
 
 #endif

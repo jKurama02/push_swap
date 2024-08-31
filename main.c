@@ -6,13 +6,13 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:58:23 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/29 16:21:47 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/30 21:09:59 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_put_num(char **numeri, char **argv)
+char	**ft_put_num(char **numeri, char **argv)
 {
 	int	i;
 	int	k;
@@ -31,6 +31,7 @@ void	ft_put_num(char **numeri, char **argv)
 		i++;
 	}
 	numeri[i - 1] = '\0';
+	return (numeri);
 }
 
 int	ft_atoi(char *str)
@@ -88,8 +89,9 @@ void	init_stacks(int argc, char **argv, t_stack *stacks)
 	else
 	{
 		numeri = (char **)malloc (sizeof(char *) * (argc));
-		ft_put_num(numeri, argv);
+		numeri = ft_put_num(numeri, argv);
 	}
+	
 	stacks->len_a = ft_len(numeri);
 	stacks->len_b = 0;
 	stacks->a = (int *)malloc (sizeof(int) * stacks->len_a);
@@ -115,7 +117,9 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	init_stacks(argc, argv, &stacks);
-	if (check_dup (stacks.a, stacks.len_a))
+	// if(check_alpha(argc, argv))
+	// 	ft_exit(&stacks);
+	if(check_dup (stacks.a, stacks.len_a))
 	{
 		write(1, "Error\n", 6);
 		free(stacks.a);

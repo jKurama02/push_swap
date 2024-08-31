@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:58:23 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/29 16:24:50 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/30 21:00:58 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,3 +52,17 @@ int	ft_len(char **mat)
 		i++;
 	return (i);
 }
+
+// int check_alpha(int argc, char **argv)
+// {
+// 	int	i;
+
+// 	i = 1;
+// 	while(argv[i] =! '\0' && ((argv[i] >= '0' && argv[i] <= '9') || argv[i] == ' '))
+// 	{
+// 		i++;
+// 	}
+// 	if(argv[i] == '\0')
+// 		return (0);
+// 	return (1);
+// }
