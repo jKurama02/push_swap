@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:58:23 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/30 21:09:59 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/31 15:12:12 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,6 @@ void	init_stacks(int argc, char **argv, t_stack *stacks)
 		numeri = (char **)malloc (sizeof(char *) * (argc));
 		numeri = ft_put_num(numeri, argv);
 	}
-	
 	stacks->len_a = ft_len(numeri);
 	stacks->len_b = 0;
 	stacks->a = (int *)malloc (sizeof(int) * stacks->len_a);
@@ -117,12 +116,14 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	init_stacks(argc, argv, &stacks);
-	// if(check_alpha(argc, argv))
-	// 	ft_exit(&stacks);
-	if(check_dup (stacks.a, stacks.len_a))
+	if (check_alpha(argc, argv))
 	{
-		write(1, "Error\n", 6);
-		free(stacks.a);
+		ft_exit(stacks);
+		return (0);
+	}
+	if (check_dup (stacks.a, stacks.len_a))
+	{
+		ft_exit(stacks);
 		return (0);
 	}
 	stacks.maxnum = max_num(stacks.a, stacks.len_a);

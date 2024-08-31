@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:58:23 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/30 21:00:58 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/08/31 15:10:39 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,16 +53,29 @@ int	ft_len(char **mat)
 	return (i);
 }
 
-// int check_alpha(int argc, char **argv)
-// {
-// 	int	i;
+int	check_alpha(int argc, char **argv)
+{
+	int	i;
+	int	k;
 
-// 	i = 1;
-// 	while(argv[i] =! '\0' && ((argv[i] >= '0' && argv[i] <= '9') || argv[i] == ' '))
-// 	{
-// 		i++;
-// 	}
-// 	if(argv[i] == '\0')
-// 		return (0);
-// 	return (1);
-// }
+	i = 1;
+	while (argc > i)
+	{
+		k = 0;
+		while (argv[i][k] != '\0')
+		{
+			if (!((argv[i][k] >= '0' && argv[i][k] <= '9')
+				|| argv[i][k] == ' '))
+				return (1);
+			k++;
+		}
+		i++;
+	}
+	return (0);
+}
+
+void	ft_exit(t_stack stacks)
+{
+	write(1, "Error\n", 6);
+	free(stacks.a);
+}
