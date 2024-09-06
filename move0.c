@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 18:24:26 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/29 16:41:24 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/09/02 17:41:48 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_sa(t_stack *stacks)
 	i = stacks->a[0];
 	stacks->a[0] = stacks->a[1];
 	stacks->a[1] = i;
-	write(2, "sa\n", 3);
+	write(1, "sa\n", 3);
 	return ;
 }
 
@@ -30,7 +30,7 @@ void	ft_sb(t_stack *stacks)
 	i = stacks->b[0];
 	stacks->b[0] = stacks->b[1];
 	stacks->b[1] = i;
-	write(2, "sb\n", 3);
+	write(1, "sb\n", 3);
 	return ;
 }
 
@@ -44,7 +44,7 @@ void	ft_ss(t_stack *stacks)
 	t = stacks->b[0];
 	stacks->b[0] = stacks->b[1];
 	stacks->b[1] = t;
-	write(2, "ss\n", 3);
+	write(1, "ss\n", 3);
 	return ;
 }
 

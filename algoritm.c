@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 17:14:45 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/29 16:18:13 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/09/06 15:47:02 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,11 @@ void	algoritm(t_stack *stacks)
 	else if (stacks->len_a == 3)
 	{
 		ft_three_sorting(stacks);
+		return ;
+	}
+	else if (stacks->len_a == 5)
+	{
+		ft_five_sorting(stacks);
 		return ;
 	}
 	else

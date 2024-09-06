@@ -6,13 +6,13 @@
 #    By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/25 15:57:58 by anmedyns          #+#    #+#              #
-#    Updated: 2024/08/29 16:35:31 by anmedyns         ###   ########.fr        #
+#    Updated: 2024/09/06 16:22:58 by anmedyns         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRC		= move0.c move1.c split.c algoritm.c main.c utils.c move2.c
+SRC		= move0.c move1.c split.c algoritm.c main.c utils.c move2.c utils2.c
 
 OBJ		=	$(SRC:.c=.o)
 
@@ -20,7 +20,7 @@ CC		=	gcc -g
 
 RM		=	rm -f
 
-FLAGS	=	-Wall -Wextra -Werror
+FLAGS	=	-Wall -Wextra -Werror # -fsanitize=address -fsanitize=undefined
 
 $(NAME):	$(OBJ)
 			$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
