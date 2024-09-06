@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 16:03:43 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/09/06 16:34:14 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/09/06 16:51:23 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,6 @@ void	ft_five_sorting(t_stack *stacks);
 void	ft_five(t_stack *stacks);
 int		ft_min(t_stack *stacks);
 void	ft_min_swap_first_element(t_stack *stacks);
-
+void	ft_three_sorting(t_stack *stacks);
 
 #endif

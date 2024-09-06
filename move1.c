@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 18:24:26 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/09/06 15:44:47 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/09/06 16:53:34 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,3 @@ void	ft_pb(t_stack *stacks)
 	write(1, "pb\n", 3);
 	return ;
 }
-//void	ft_five_sorting(t_stack *stacks)
-
-
