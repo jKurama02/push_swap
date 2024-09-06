@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 16:15:24 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/09/06 16:50:48 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/09/06 20:03:54 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_min(t_stack *stacks)
 
 	min = 0;
 	i = -1;
-	while (++i < stacks->maxnum)
+	while (++i < stacks->len_a)
 	{
 		if (stacks->a[i] < stacks->a[min])
 			min = i;

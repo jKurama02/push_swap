@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:58:23 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/08/31 15:10:39 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/09/06 19:24:38 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ int	check_alpha(int argc, char **argv)
 		while (argv[i][k] != '\0')
 		{
 			if (!((argv[i][k] >= '0' && argv[i][k] <= '9')
-				|| argv[i][k] == ' '))
+				|| argv[i][k] == ' '
+				|| argv[i][k] == '-' || argv[i][k] == '+'))
 				return (1);
 			k++;
 		}
