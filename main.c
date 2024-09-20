@@ -6,7 +6,7 @@
 /*   By: anmedyns <anmedyns@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:58:23 by anmedyns          #+#    #+#             */
-/*   Updated: 2024/09/06 20:03:00 by anmedyns         ###   ########.fr       */
+/*   Updated: 2024/09/20 22:49:33 by anmedyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,7 @@ int	main(int argc, char **argv)
 
 	if (argc == 1)
 	{
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
 		return (1);
 	}
 	init_stacks(argc, argv, &stacks);
